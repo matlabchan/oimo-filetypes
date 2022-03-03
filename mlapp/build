@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/mathworks/devel/jobarchive/BR2018bd/latest_pass/matlab/bin/matlab -nodesktop -nosplash -r 'exit(build)'

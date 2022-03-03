@@ -1,0 +1,94 @@
+<deployment-project plugin="plugin.webdeploy" plugin-version="1.0">
+  <configuration file="/local-ssd/ralcock/NFLPlayersApp/NFLPlayersWebApp.prj" location="/local-ssd/ralcock/NFLPlayersApp" name="NFLPlayersWebApp" target="target.webdeploy" target-name="Web App Compiler">
+    <param.appname>NFLPlayers</param.appname>
+    <param.version>1.0</param.version>
+    <param.displayname>NFLPlayers</param.displayname>
+    <param.authnamewatermark>Richard Alcock</param.authnamewatermark>
+    <param.summary>Visualize NFL players weight and height over time.</param.summary>
+    <param.screenshot>${PROJECT_ROOT}/screenshot.png</param.screenshot>
+    <param.intermediate>${PROJECT_ROOT}/NFLPlayersWebApp/for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}/NFLPlayersWebApp/for_redistribution_files_only</param.files.only>
+    <param.output>${PROJECT_ROOT}/NFLPlayersWebApp/for_redistribution</param.output>
+    <param.logdir>${PROJECT_ROOT}/NFLPlayersWebApp</param.logdir>
+    <param.target.type>subtarget.web.app</param.target.type>
+    <param.user.defined.mcr.options />
+    <unset>
+      <param.version />
+      <param.intermediate />
+      <param.files.only />
+      <param.output />
+      <param.logdir />
+      <param.target.type />
+      <param.user.defined.mcr.options />
+    </unset>
+    <fileset.web.main>
+      <file>${PROJECT_ROOT}/NFLPlayersApp.mlapp</file>
+    </fileset.web.main>
+    <fileset.resources />
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}/NFLPlayersData.mat</file>
+      <file>${PROJECT_ROOT}/NFLPlayersModel.m</file>
+    </fileset.depfun>
+    <fileset.package />
+    <build-deliverables>
+      <file location="${PROJECT_ROOT}/NFLPlayersWebApp/for_testing" name="NFLPlayers.ctf" optional="false">/local-ssd/ralcock/NFLPlayersApp/NFLPlayersWebApp/for_testing/NFLPlayers.ctf</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>/mathworks/devel/jobarchive/BR2018ad/.zfs/snapshot/BR2018ad.789291.pass.ja1/current/build/matlab</root>
+      <toolboxes>
+        <toolbox name="fixedpoint" />
+        <toolbox name="matlabcoder" />
+        <toolbox name="matlabhdlcoder" />
+        <toolbox name="embeddedcoder" />
+        <toolbox name="gpucoder" />
+        <toolbox name="polyspacebugfinder" />
+      </toolboxes>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+      <toolbox>
+        <gpucoder>
+          <enabled>true</enabled>
+        </gpucoder>
+      </toolbox>
+      <toolbox>
+        <polyspacebugfinder>
+          <enabled>true</enabled>
+        </polyspacebugfinder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>true</unix>
+      <mac>false</mac>
+      <windows>false</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>true</linux>
+      <solaris>false</solaris>
+      <osver>4.4.0-0.bpo.tmw1-amd64</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>glnxa64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
